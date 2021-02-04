@@ -1,0 +1,17 @@
+{{ define "messages" }}
+  {{ if index . "errors" }}
+    <div class="errors" style="background: darksalmon; padding: 10px;">
+        {{ range index . "errors" }}
+        <p>{{ . }}</p>
+        {{ end }}
+    </div>
+  {{ end }}
+  {{ if index . "messages" }}
+    <div class="messages" style="background: darkseagreen; padding: 10px;">
+        {{ range index . "messages" }}
+        <p>{{ . }}</p>
+        {{ end }}
+    </div>
+  {{ end }}
+
+{{ end }}
